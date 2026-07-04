@@ -8,6 +8,7 @@ import LinkCardIon from "./components/icons/PortfolioIcon";
 import LinkCardArrow from "./components/icons/LinkCardArrow";
 import LinkCard from "./components/LinkCard";
 import GlobalAnomalousActivityMonitoringOrganizationIcon from "./components/icons/GlobalAnomalousActivityMonitoringOrganizationIcon";
+import { PageInfo, pageinfo } from "./constants/PageInfo";
 
 type VisibleLogs = {
   text: string;
@@ -68,9 +69,13 @@ export default function Home() {
           </section>
         </div>
         <section className={`page-links ${showContent ? "show" : "hide"
-            }`}>
-          <LinkCard page_name="Portfolio Site" page_name_explain="ポートフォリオサイト" icon={<LinkCardIon />} link="https://portfolio.rurariyu.dev" />
-          <LinkCard page_name="Comming soon..." page_name_explain="お待ちください..." icon={<GlobalAnomalousActivityMonitoringOrganizationIcon />} link="" />
+          }`}>
+          {
+            PageInfo.map((page: pageinfo) => (
+              <LinkCard page_name={page.name} page_name_explain={page.site_explain} icon={page.icon} link={page.link} />
+            ))
+          }
+
           <LinkCard page_name="Comming soon..." page_name_explain="お待ちください..." icon={<GlobalAnomalousActivityMonitoringOrganizationIcon />} link="" />
           <LinkCard page_name="Comming soon..." page_name_explain="お待ちください..." icon={<GlobalAnomalousActivityMonitoringOrganizationIcon />} link="" />
         </section>
