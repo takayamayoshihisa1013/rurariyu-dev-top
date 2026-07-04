@@ -7,7 +7,7 @@ type pageinfo = {
 
 export const PageInfo = [
     {
-        "name": "Portfolio Site",
+        "name": "Yoshihisa Takayama`s Portfolio Site",
         "site_explain": "ポートフォリオサイト",
         "link": "https://portfolio.rurariyu.dev",
         "css": {}
