@@ -12,7 +12,7 @@ export type pageinfo = {
 export const PageInfo: pageinfo[] = [
     {
         name: "Yoshihisa Takayama`s Portfolio Site",
-        site_explain: "ポートフォリオサイト",
+        site_explain: "高山 慶久のポートフォリオサイト",
         link: "https://portfolio.rurariyu.dev",
         css: {},
         icon: <PortfolioIcon />
