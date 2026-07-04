@@ -16,5 +16,12 @@ export const PageInfo: pageinfo[] = [
         link: "https://portfolio.rurariyu.dev",
         css: {},
         icon: <PortfolioIcon />
+    },
+    {
+        name: "世界異常観測システム",
+        site_explain: "どこかの世界の異常を観測するシステム",
+        link: "https://wam-panopticon.rurariyu.dev",
+        css: {},
+        icon: <PortfolioIcon />
     }
 ]
