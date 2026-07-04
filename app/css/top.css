@@ -1,0 +1,198 @@
+/* ── テキスト色 ── */
+.normal-text {
+    color: #7b75a0;
+}
+
+.check-text {
+    color: #4ade80;
+}
+
+.info-text {
+    color: #cc9845;
+}
+
+.error-text {
+    color: #ff1a40;
+}
+
+/* ── 表示切り替え ── */
+.hide {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* ────────────────────────────
+   上段：ログ + プロフィール
+──────────────────────────── */
+.top {
+    display: flex;
+}
+
+.top-log {
+    box-sizing: border-box;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 40%;
+    min-width: 400px;
+}
+
+.top-log .log-text span {
+    margin: 0 5px;
+}
+
+/* プロフィールセクション */
+.contents {
+    border-left: 1px solid #2a2640; /* ← #FFFFから落ち着いた色に */
+    color: #ddd6f0;
+    transition: 0.4s;
+    padding: 30px 36px;
+    box-sizing: border-box;
+    width: 60%;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 36px; /* ← gap: 50 → 単位つきに修正 */
+}
+
+.contents .profile-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contents div img {
+    width: 200px;
+    aspect-ratio: 1;
+    min-width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    border: 2px solid #252240;
+}
+
+.contents .profile-text {
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contents div h2 {
+    color: #ddd6f0;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.contents div p {
+    color: #7b75a0; /* ← #a89ec8より少し落ち着かせて読みやすく */
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* ────────────────────────────
+   下段：ページリンク
+──────────────────────────── */
+.page-links {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    gap: 16px; /* ← gap: 20 → 単位つきに修正 */
+    border-top: 1px solid #2a2640; /* ← 落ち着いた色に */
+    padding: 20px 0 32px;
+    flex-wrap: wrap;
+}
+
+.page-link-card {
+    width: calc((100% / 4) - 12px);
+    /* height: 300px を廃止 → 内容に合わせて自動伸縮 */
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #1e1c2a; /* ← #FFFFから暗い色に */
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: transparent;
+    transition: border-color 0.25s, background 0.25s;
+    cursor: pointer;
+}
+
+.page-link-card:hover {
+    border-color: #3a3560;
+    background: rgba(167, 139, 250, 0.04);
+}
+
+.page-link-card svg {
+    color: #3a3560;
+    fill: #3a3560;
+    transition: fill 0.25s;
+}
+
+.page-link-card:hover svg {
+    fill: #a78bfa;
+}
+
+.page-link-card h3 {
+    color: #c4bae0;
+    font-size: 1rem;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.page-link-card > div > p {
+    color: #3a3550;
+    font-size: 0.85rem;
+}
+
+/* ボタン */
+.page-link-card button {
+    border: none;
+    background: transparent; /* ← background-color: none → 正しい値に修正 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 16px;
+    transition: 0.25s;
+}
+
+.page-link-card button svg {
+    fill: #3a3550;
+    transition: fill 0.25s, transform 0.25s;
+}
+
+.page-link-card:hover button svg {
+    fill: #a78bfa;
+    transform: translateX(3px);
+}
+
+/* GOテキスト：ホバーで右からスライドイン */
+.page-link-card button p {
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.25s, transform 0.25s;
+    color: #a78bfa;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+}
+
+.page-link-card:hover button p {
+    opacity: 1;
+    transform: translateX(0);
+    margin-right: 0; /* ← margin-right: 100px を廃止 */
+}
