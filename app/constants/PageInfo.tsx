@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import PortfolioIcon from "../components/icons/PortfolioIcon";
+import GlobalAnomalousActivityMonitoringOrganizationIcon from "../components/icons/GlobalAnomalousActivityMonitoringOrganizationIcon";
 
 export type pageinfo = {
     name:         string;
@@ -22,6 +23,6 @@ export const PageInfo: pageinfo[] = [
         site_explain: "どこかの世界の異常を観測するシステム",
         link: "https://wam-panopticon.rurariyu.dev",
         css: {},
-        icon: <PortfolioIcon />
+        icon: <GlobalAnomalousActivityMonitoringOrganizationIcon />
     }
 ]
